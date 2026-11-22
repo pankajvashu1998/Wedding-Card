@@ -92,13 +92,13 @@ const Index = () => {
         </div>
 
         <div className=" min-h-screen  w-full flex justify-between mt-30 relative">
-          <div className=" absolute -left-10 sm:-left-15 sm:w-[w-50%] sm:h-full h-[60%]">
+          <div className=" absolute -left-15 sm:w-[w-50%] sm:h-full h-[60%]">
             <img src={tree} alt="" className=" object-cover w-full h-full " />
           </div>
 
           <div className="w-full"></div>
 
-          <div className=" absolute -right-10 sm:-right-15  w-[w-50%] sm:h-full h-[60%]">
+          <div className=" absolute -right-15  w-[w-50%] sm:h-full h-[60%]">
             <img
               src={tree}
               alt=""
