@@ -8,17 +8,18 @@ import kalash2 from "./imageThemes/kalash2-decoration.webp";
 import leaf1 from "./imageThemes/leaf1-decoration.webp";
 import kalash from "./imageThemes/kalash-decoration.webp";
 import tree from "./imageThemes/tree-decoration.webp";
+import line_decorate from "./imageThemes/line-decoration.webp";
 import { useAutoScroll } from "../../utils/useAutoScroll";
 
 const Index = () => {
-  const { startScroll, toggleScroll, isPlaying } = useAutoScroll(25);
+  // const { startScroll, toggleScroll, isPlaying } = useAutoScroll(25);
 
-  useEffect(() => {
-    startScroll();
-  }, [startScroll]);
+  // useEffect(() => {
+  //   startScroll();
+  // }, [startScroll]);
   return (
     <div
-      onClick={toggleScroll}
+      // onClick={toggleScroll}
       className="w-full min-h-screen bg-[#f5e9c9] cursor-pointer"
     >
       <div
@@ -88,6 +89,30 @@ const Index = () => {
                 className="relative w-full h-auto object-contain "
               />
             </div>
+          </div>
+        </div>
+
+        {/* Contents */}
+
+        <div className="my-10 w-full text-center">
+          <h2 className="text-3xl tracking-wider font-semibold text-green-800 font-mono">
+            CEREMONY INFO
+          </h2>
+          <div className="w-full flex justify-between items-center  mt-8">
+            <div className="w-full "></div>
+            <div className="w-full  flex items-center justify-center">
+              <img src={line_decorate} alt="" className="w-[10%]" />
+            </div>
+            <div className="w-full "></div>
+          </div>
+
+          <div className="mt-8">
+            <h2 className="text-center text-xl tracking-wider text-red-900 font-semibold">
+              WE JOYFULLY ANNOUNCE
+            </h2>
+            <h2 className="text-center text-xl tracking-wider text-red-900 font-semibold">
+              THE WEDDING OF OUR CHILDREN
+            </h2>
           </div>
         </div>
 
