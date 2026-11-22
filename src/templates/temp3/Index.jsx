@@ -138,7 +138,7 @@ const Index = () => {
 
           <div className="w-full"></div>
 
-          <div className=" absolute -left-20 sm:-right-10  w-[w-50%] h-full">
+          <div className=" absolute -right-20 sm:-right-10  w-[w-50%] h-full">
             <img
               src={tree}
               alt=""
