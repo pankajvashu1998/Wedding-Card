@@ -1,4 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 
 import backgroundTexture from "./imageThemes/background-texture.webp";
 import flowergarland from "./imageThemes/flower-garland.webp";
@@ -17,6 +23,15 @@ const Index = () => {
   useEffect(() => {
     startScroll();
   }, [startScroll]);
+
+  const images = [
+    "https://swiperjs.com/demos/images/abstract-1.jpg",
+    "https://swiperjs.com/demos/images/abstract-2.jpg",
+    "https://swiperjs.com/demos/images/abstract-3.jpg",
+    "https://swiperjs.com/demos/images/abstract-4.jpg",
+    "https://swiperjs.com/demos/images/abstract-5.jpg",
+  ];
+
   return (
     <div
       onClick={toggleScroll}
@@ -101,7 +116,7 @@ const Index = () => {
           <div className="w-full flex justify-between items-center  mt-8">
             <div className="w-full "></div>
             <div className="w-full  flex items-center justify-center">
-              <img src={line_decorate} alt="" className="w-[10%]" />
+              <img src={line_decorate} alt="" className="w-[15%]" />
             </div>
             <div className="w-full "></div>
           </div>
@@ -130,6 +145,41 @@ const Index = () => {
               className="-scale-x-100 object-cover w-full h-full "
             />
           </div>
+        </div>
+
+        <div className="gallery-container ">
+          <Swiper
+            effect="coverflow"
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView="auto"
+            loop={true}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            coverflowEffect={{
+              rotate: 25,
+              stretch: 0,
+              depth: 150,
+              modifier: 1.5,
+              slideShadows: true,
+            }}
+            pagination={{ clickable: true }}
+            modules={[EffectCoverflow, Pagination, Autoplay]}
+            className="mySwiper"
+          >
+            {images.map((img, i) => (
+              <SwiperSlide key={i} >
+                <img
+                  src={img}
+                  alt={`Memory ${i + 1}`}
+                  className="gallery-image"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </div>
