@@ -15,6 +15,8 @@ import leaf1 from "./imageThemes/leaf1-decoration.webp";
 import kalash from "./imageThemes/kalash-decoration.webp";
 import tree from "./imageThemes/tree-decoration.webp";
 import line_decorate from "./imageThemes/line-decoration.webp";
+import goldenline from "./imageThemes/goldenline-decoration.webp";
+import flower from "./imageThemes/flower-decoration.webp";
 import { useAutoScroll } from "../../utils/useAutoScroll";
 
 const Index = () => {
@@ -147,8 +149,11 @@ const Index = () => {
           </div>
         </div>
 
+        {/* Swiper image */}
         <div className="gallery-container ">
-          <h2 className="text-3xl font-semibold text-green-900 pb-12 text-center">PHOTO GALLERY</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold text-green-900 pb-12 text-center">
+            PHOTO GALLERY
+          </h2>
           <Swiper
             effect="coverflow"
             grabCursor={true}
@@ -172,7 +177,7 @@ const Index = () => {
             className="mySwiper"
           >
             {images.map((img, i) => (
-              <SwiperSlide key={i} >
+              <SwiperSlide key={i}>
                 <img
                   src={img}
                   alt={`Memory ${i + 1}`}
@@ -181,6 +186,29 @@ const Index = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+        </div>
+
+        <div>
+          <div className="w-full flex justify-center items-center">
+            <img src={goldenline} alt="" className="w-[50%]" />
+          </div>
+        </div>
+
+        {/* Flowers */}
+        <div className="min-h-[80vh]  w-full flex justify-between mt-30 relative">
+          <div className=" absolute -left-60 sm:-left-40 w-[w-50%] h-full rotate-20">
+            <img src={flower} alt="" className=" object-cover w-full h-full " />
+          </div>
+
+          <div className="w-full"></div>
+
+          <div className=" absolute -right-60 sm:-right-40 w-[w-50%] h-full -rotate-20">
+            <img
+              src={flower}
+              alt=""
+              className="-scale-x-100 object-cover w-full h-full "
+            />
+          </div>
         </div>
       </div>
     </div>
