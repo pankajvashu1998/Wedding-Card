@@ -195,19 +195,28 @@ const Index = () => {
         </div>
 
         {/* Flowers */}
-        <div className="min-h-screen  w-full flex justify-between mt-30 relative">
-          <div className=" h-80 sm:h-150 rotate-20 absolute left-[-36%] sm:left-[-29%]">
-            <img src={flower} alt="" className=" object-cover w-full h-full " />
+        <div className="w-full mt-10">
+          <div className="text-center">
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-wider text-green-900">RECEPTION INFO</h2>
           </div>
+          <div className="min-h-screen  w-full flex justify-between mt-30 relative">
+            <div className=" h-80 sm:h-150 rotate-20 absolute left-[-36%] sm:left-[-29%]">
+              <img
+                src={flower}
+                alt=""
+                className=" object-cover w-full h-full "
+              />
+            </div>
 
-          <div className="w-full "></div>
+            <div className="w-full "></div>
 
-          <div className=" h-80 sm:h-150   -rotate-20 absolute right-[-36%] sm:right-[-29%]">
-            <img
-              src={flower}
-              alt=""
-              className="-scale-x-100 object-cover w-full h-full "
-            />
+            <div className=" h-80 sm:h-150   -rotate-20 absolute right-[-36%] sm:right-[-29%]">
+              <img
+                src={flower}
+                alt=""
+                className="-scale-x-100 object-cover w-full h-full "
+              />
+            </div>
           </div>
         </div>
       </div>
