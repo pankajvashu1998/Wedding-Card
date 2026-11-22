@@ -12,14 +12,14 @@ import line_decorate from "./imageThemes/line-decoration.webp";
 import { useAutoScroll } from "../../utils/useAutoScroll";
 
 const Index = () => {
-  // const { startScroll, toggleScroll, isPlaying } = useAutoScroll(25);
+  const { startScroll, toggleScroll, isPlaying } = useAutoScroll(25);
 
-  // useEffect(() => {
-  //   startScroll();
-  // }, [startScroll]);
+  useEffect(() => {
+    startScroll();
+  }, [startScroll]);
   return (
     <div
-      // onClick={toggleScroll}
+      onClick={toggleScroll}
       className="w-full min-h-screen bg-[#f5e9c9] cursor-pointer"
     >
       <div
