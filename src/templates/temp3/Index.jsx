@@ -18,11 +18,11 @@ import line_decorate from "./imageThemes/line-decoration.webp";
 import { useAutoScroll } from "../../utils/useAutoScroll";
 
 const Index = () => {
-  const { startScroll, toggleScroll, isPlaying } = useAutoScroll(25);
+  // const { startScroll, toggleScroll, isPlaying } = useAutoScroll(25);
 
-  useEffect(() => {
-    startScroll();
-  }, [startScroll]);
+  // useEffect(() => {
+  //   startScroll();
+  // }, [startScroll]);
 
   const images = [
     "https://swiperjs.com/demos/images/abstract-1.jpg",
@@ -34,7 +34,7 @@ const Index = () => {
 
   return (
     <div
-      onClick={toggleScroll}
+      // onClick={toggleScroll}
       className="w-full min-h-screen bg-[#f5e9c9] cursor-pointer"
     >
       <div
@@ -131,14 +131,14 @@ const Index = () => {
           </div>
         </div>
 
-        <div className=" min-h-screen  w-full flex justify-between mt-30 relative">
-          <div className=" absolute -left-15 sm:w-[w-50%] sm:h-full h-[60%]">
+        <div className=" min-h-[80vh]  w-full flex justify-between mt-30 relative">
+          <div className=" absolute -left-10 w-[w-50%] h-full">
             <img src={tree} alt="" className=" object-cover w-full h-full " />
           </div>
 
           <div className="w-full"></div>
 
-          <div className=" absolute -right-15  w-[w-50%] sm:h-full h-[60%]">
+          <div className=" absolute -right-10  w-[w-50%] h-full">
             <img
               src={tree}
               alt=""
