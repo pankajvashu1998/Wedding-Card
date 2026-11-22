@@ -148,6 +148,7 @@ const Index = () => {
         </div>
 
         <div className="gallery-container ">
+          <h2 className="text-3xl font-semibold text-green-900 pb-12 text-center">PHOTO GALLERY</h2>
           <Swiper
             effect="coverflow"
             grabCursor={true}
