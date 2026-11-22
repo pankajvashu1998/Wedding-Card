@@ -196,13 +196,13 @@ const Index = () => {
 
         {/* Flowers */}
         <div className="min-h-screen  w-full flex justify-between mt-30 relative">
-          <div className=" absolute left-[-29%]  h-full rotate-20">
+          <div className=" h-80 sm:h-150 rotate-20 absolute left-[-36%] sm:left-[-29%]">
             <img src={flower} alt="" className=" object-cover w-full h-full " />
           </div>
 
-          <div className="w-full"></div>
+          <div className="w-full "></div>
 
-          <div className=" absolute right-[-29%]  h-full -rotate-20">
+          <div className=" h-80 sm:h-150   -rotate-20 absolute right-[-36%] sm:right-[-29%]">
             <img
               src={flower}
               alt=""
